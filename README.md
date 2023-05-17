@@ -86,6 +86,12 @@ pip3 install -r requirements.txt
 ```
 
 Run the `build_monotonic_align.sh` script in the `src/python` directory to build the extension.
+Note : If your are having issue using `build_monotonic_align.sh` its probably because script file is created or edited on a Windows system and then transferred to a Unix-based system (like Linux or macOS).
+Do the following to remedy that
+`sudo apt-get install dos2unix`
+then run `dos2unix build_monotonic_align.sh`
+
+Then run the `./build_monotonic_align.sh`
 
 Ensure you have [espeak-ng](https://github.com/espeak-ng/espeak-ng/) installed (`sudo apt-get install espeak-ng`).
 
