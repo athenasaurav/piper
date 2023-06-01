@@ -35,7 +35,7 @@ def main():
 
     sess_options = onnxruntime.SessionOptions()
     _LOGGER.debug("Loading model from %s", args.model)
-    model = onnxruntime.InferenceSession(str(args.model), sess_options=sess_options)
+    model = onnxruntime.InferenceSession(str(args.model), sess_options=sess_options, providers=['CUDAExecutionProvider'])
     _LOGGER.info("Loaded model from %s", args.model)
 
     phonemizer = Phonemizer()
